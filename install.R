@@ -1,2 +1,5 @@
 install.packages("remotes")
 remotes::install_gitlab("TIBHannover/orkg/orkg-r")
+install.packages('meta')
+install.packages('esc')
+install.paclages('dplyr')

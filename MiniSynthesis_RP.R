@@ -1,6 +1,6 @@
 # Install latest version of the ORKG R package from Git
 install.packages('remotes')
-remotes::install_gitlab("TIBHannover/orkg/orkg-r", force=TRUE)
+
 # Connect with ORKG
 library(orkg)
 orkg <- ORKG(host='https://incubating.orkg.org/')
@@ -20,14 +20,14 @@ Paredes2022Fig4Anova
 
 #create a master dataframe (named master_df) for the mini-metaanalysis based on ChatGPT instructions - this is just an exercise for fun to test ChatGPT :) We will use Ricardo's dataframe for the actual meta-analysis (see below)
 master_df <- data.frame (
-  p.value = numeric (),
+  p.value = numeric(),
   statistic.value = numeric(),
   species = character (),
   direction = numeric(),
   study = character (),
   stats.test.type = character (),
-  sample.size = integer (),
-  stringsAsFactors = FALSE
+  sample.size = integer ()
+
 )
 
 #bring in significance values
@@ -122,7 +122,6 @@ stats_test_perez <- c("t-value", "t-value", "t-value")
 SampleSize_perez <- c(42, 43, 41)
 Perez_total["stats_test"] <- stats_test_perez
 Perez_total["Sample size"] <- SampleSize_perez 
-
 #change column names
 colnames(Perez_total ) <- c('p.value','Statistic.value','species',"Direction", "Study", "stats_test_Type","Sample_size")
 
@@ -163,19 +162,19 @@ MetaAnalysis_Data
 
 library (meta)
 library (esc)
-library(tidyverse)
-library(metafor)
-library (ggplot2)
-library (MuMIn)
-library (PerformanceAnalytics)
+# library(tidyverse)
+# library(metafor)
+# library (ggplot2)
+# library (MuMIn)
+# library (PerformanceAnalytics)
 library (dplyr)
-library(glmulti)
-library(emmeans)
-library (devtools)
-library(remotes)
-library(gt)
-library(orchaRd)
-library (metacor)
+# library(glmulti)
+# library(emmeans)
+# library (devtools)
+# library(remotes)
+# library(gt)
+# library(orchaRd)
+# library (metacor)
 
 
 #estimating coefficients of correlation
